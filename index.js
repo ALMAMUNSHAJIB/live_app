@@ -123,8 +123,8 @@ mongoose.set("strictQuery", false);
 
 //const db = mongoose.connection;
 
-var db = "mongodb+srv://mamuneuphoriainfotech:s1yHARtIbZhu98lL@cluster0.y8tzxar.mongodb.net/trackerdb?retryWrites=true&w=majority";
-mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true });
+var db = process.env.MONGO;
+mongoose.connect(db);
 
 const conSuccess = mongoose.connection
 // conSuccess.once('open', _ => {
