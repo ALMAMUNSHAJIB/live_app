@@ -16,6 +16,11 @@ const UserController = require("./user.controller");
 
 const checkAccessWithSecretKey = require("../../checkAccess");
 
+// User divices 
+const {verifyUser} = require('../userVerify/userVerifyController');
+
+route.post("/google-data", verifyUser);
+
 //Login User API
 route.post(
   "/login",
