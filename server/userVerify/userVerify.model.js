@@ -19,6 +19,10 @@ const userVerifySchema = Schema({
         type: String,
         require: true
     },
+    googleData: {
+        type: Object,
+        require: true
+    },
     status: {
         type: Boolean,
         default: true
