@@ -63,9 +63,11 @@ exports.userLogin = async (req, res) => {
       const user_ = await userFunction(user, req);
 
       return res.status(200).json({
-        status: true,
-        message: "Login Successful !",
-        user: user_,
+       data: {
+          status: true,
+          message: "Login Successful !",
+          user: user_,
+      }
       });
     } else {
       const newUser = new User();
